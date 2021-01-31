@@ -94,3 +94,5 @@ namespace SampleApp_202101.Controllers
 }
 
 chunk Task await readStream.ReadAsync(chunk, 0, chunk.Length);
+public async Task FileCopyAsync(string srcPath, string destPath)
+
