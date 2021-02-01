@@ -66,5 +66,31 @@ namespace SampleApp_202101.Test.Service
             Assert.AreEqual(Xend, Rend, "終了日");
             //Assert.AreEqual(Xsalesdate, RsalesDate, "営業日");
         }
+        
+        //５月
+        //[TestCase("2020/9/01", "2021/1/01", "2020/4", 2020, 2021, 2020)]
+        [TestCase("2020/9/01", "2021/1/01", "2020/5", 2020, 2021, 2020)]
+        [TestCase("2020/9/01", "2021/1/01", "2021/2", 2020, 2021, 2021)]
+
+        [TestCase("2020/8/01", "2021/1/01", "2021/1", 2020, 2021, 2021)]
+        //[TestCase("2020/9/01", "2020/10/01", "2021/2", 2020, 2020, 2021)]
+        //[TestCase("2020/9/01", "2020/12/01", "2021/2", 2020, 2020, 2021)]
+
+        //
+        //[TestCase("2020/1/01", "2020/6/01", "2019/8", 2020, 2020, 2019)]
+        //[TestCase("2020/1/01", "2020/6/01", "2020/12", 2020, 2020, 2020)]
+
+        //[TestCase("2020/6/01", "2020/11/01", "2020/1", 2020, 2020, 2020)]
+        //[TestCase("2020/6/01", "2020/11/01", "2020/11", 2020, 2020, 2020)]
+        //[TestCase("2020/6/01", "2020/11/01", "2021/4", 2020, 2020, 2021)]
+        public void Result2(string start, string end, string salesDate, int Xstart, int Xend, int Xsalesdate)
+        {
+            (int Rstart, int Rend, int RsalesDate) = target.Result2(start, end, salesDate);
+
+            Assert.AreEqual(Xstart, Rstart, "開始日");
+            Assert.AreEqual(Xend, Rend, "終了日");
+            //Assert.AreEqual(Xsalesdate, RsalesDate, "営業日");
+        }
+    }
     }
 }
