@@ -96,3 +96,7 @@ namespace SampleApp_202101.Controllers
 chunk Task await readStream.ReadAsync(chunk, 0, chunk.Length);
 public async Task FileCopyAsync(string srcPath, string destPath)
 
+https://csharp.sql55.com/database/how-to-get-data-from-sql-server-database-using-sqldatareader.php
+https://garafu.blogspot.com/2016/05/cs-sqlserver-exec-select.html
+
+
