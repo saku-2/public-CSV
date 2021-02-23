@@ -15,6 +15,7 @@ namespace SampleApp_202101.Test.Service
         //テストプロジェクトー右クリックーNuget追加
         //Nunit　3TestAdapter
         //moq
+        //メソッドはvoid
 
     [TestFixture]
     public class SalesServiceTest
